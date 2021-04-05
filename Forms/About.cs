@@ -36,7 +36,7 @@ namespace DNSBLChecker.Forms
         private void About_Load(object sender, EventArgs e)
         {
             VersionValue.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            DateValue.Text = File.GetCreationTimeUtc(Assembly.GetExecutingAssembly().Location).ToString();
+            DateValue.Text = File.GetCreationTime(Process.GetCurrentProcess().MainModule.FileName).ToString();
         }
     }
 }

@@ -22,3 +22,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("A tool to check if an ip is black listed by the provided dns black list servers.")]
 [assembly: AssemblyCopyright("Copyright © Hamzi Alsheikh 2021")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyTitle("A tool to check if an ip is black listed by the provided dns black list servers.")]
