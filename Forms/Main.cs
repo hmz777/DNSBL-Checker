@@ -10,7 +10,7 @@ namespace DNSBLChecker.Forms
 {
     public partial class Main : Form
     {
-        private static CancellationTokenSource CancellationTokenSource = new CancellationTokenSource();
+        private static CancellationTokenSource CancellationTokenSource;
         private static bool OperationStarted;
 
         public Main()
@@ -56,6 +56,10 @@ namespace DNSBLChecker.Forms
             {
                 CancellationTokenSource.Cancel();
                 return;
+            }
+            else
+            {
+                CancellationTokenSource = new CancellationTokenSource();
             }
 
             if (string.IsNullOrWhiteSpace(IPBox.Text) || !IPAddress.TryParse(IPBox.Text, out _) || !IPChecker.AreUrlsLoaded())
